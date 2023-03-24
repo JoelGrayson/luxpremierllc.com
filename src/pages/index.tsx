@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function Home() {
     return <Page padding>
-        {/* <h1 className='text-center mt-5'>Lux Premier</h1> */}
-        <p className='mt-10 mb-8 text-center text-xl'>Lux Premier LLC is the parent company of three subsidiaries:</p>
+        <h1 className='text-center mt-10'>Lux Premier LLC</h1>
+        <p className='text-xl leading-relaxed mb-5'>Lux Premier is a limited liability company in New York State that started operations in 2019. It is led by Joel Grayson and his father sidekick, Paul Grayson. It is the parent company of three subsidiaries:</p>
         <section className='flex justify-around'>
             <Subsidiary color={'#b32636'} description={'Online painting gallery selling canvas prints for home decor'} href='https://lirongart.com'>
                 <Image src='/images/lirong-art.gif' alt='lirong-art-logo' height={35} width={28} />
