@@ -2,9 +2,13 @@ import Page from '@/components/Page';
 import Image from 'next/image';
 import { Tooltip, Whisper } from 'rsuite';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function Home() {
     return <Page padding>
+        <Head>
+            <title>Lux Premier LLC</title>
+        </Head>
         <h1 className='text-center mt-10'>Lux Premier LLC</h1>
         <p className='text-xl leading-relaxed mb-5'>Lux Premier is a company in New York State that started operations in 2019. It is led by Joel Grayson and his father sidekick, Paul Grayson. It is the parent company of three subsidiaries:</p>
         <section className='flex justify-around'>
