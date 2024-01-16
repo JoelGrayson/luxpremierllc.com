@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import '@/styles/global.css';
 import '@/styles/rsuite-only-styling-components.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
