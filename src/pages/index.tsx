@@ -10,7 +10,7 @@ export default function Home() {
             <title>Lux Premier LLC</title>
         </Head>
         <h1 className='text-center mt-10'>Lux Premier LLC</h1>
-        <p className='text-xl leading-relaxed mb-5'>Lux Premier is a company in New York State that started operations in 2019. Here are its various projects:</p>
+        <p className='text-xl leading-relaxed mb-5'>Lux Premier is a limited liability company in New York State that started operations in 2019. Here are its various projects:</p>
         <section className='grid grid-cols-3 gap-3'>
             <Subsidiary color={'#ebedf0'} description={'App for changing file date metadata'} href='https://joelgrayson.com/software/edit-time'>
                 <Image src='/images/edit-time.png' alt='Edit Time logo' height={60} width={60} />

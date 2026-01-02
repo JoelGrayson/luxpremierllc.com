@@ -41,7 +41,7 @@ export default function Page({children, noheader=false, title, padding, ...props
                 </div>
                 <div> {/* Right */}
                     <Nav>
-                        <Nav.Item href='https://joelgrayson.com/contact'>Contact</Nav.Item>
+                        <Nav.Item href='https://joelgrayson.com/contact?referrer=luxpremierllc.com'>Contact</Nav.Item>
                     </Nav>
                 </div>
             </Header>
