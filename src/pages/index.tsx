@@ -29,8 +29,16 @@ export default function Home() {
                 <h2 className='text-2xl text-black mt-3 relative'>Buseroo<Com /></h2>
             </Subsidiary>
             <Subsidiary color={'#eee'} description={'Online t-shirt shop'} href='https://shirtocracy.com'>
-                <Image src='/images/shirtocracy.png' alt='Shirtocracy logo' height={75} width={75} />
-                <h2 className='text-2xl mt-3 relative'>Shirtocracy<Com /></h2>
+                <Image src='/images/shirtocracy.png' alt='Shirtocracy logo' height={70} width={70} />
+                <h2 className='text-2xl mt-2 relative'>Shirtocracy<Com /></h2>
+            </Subsidiary>
+            <Subsidiary color={'#e8393e'} description={'App and site for learning Chinese'} href='https://chineseisfun.com'>
+                <Image src='/images/chineseisfun.png' alt='Chinese is Fun logo' height={60} width={60} />
+                <h2 className='text-xl text-white mt-4 relative text-center'>ChineseIsFun<Com /></h2>
+            </Subsidiary>
+            <Subsidiary color={'#f5efe6'} description={'The world\'s best Shanghainese dictionary, with English and Mandarin translations'} href='https://shanghaidictionary.com'>
+                <Image src='/images/shanghaidictionary.com.png' alt='Shanghai Dictionary logo' height={60} width={60} />
+                <h2 className='text-base text-black mt-3 relative text-center'>ShanghaiDictionary<Com /></h2>
             </Subsidiary>
         </section>
     </Page>;
@@ -39,7 +47,7 @@ export default function Home() {
 export function Subsidiary({ description, href, color, children }: { description: string; href: string; color: string; children: any }) {
     return <Whisper followCursor speaker={<Tooltip>{description}</Tooltip>}>
         <Link href={href} target='_blank'>
-            <div className='shadow-md rounded-lg p-4 flex flex-col items-center justify-center h-[150px] w-[180px]' style={{
+            <div className='shadow-md rounded-lg py-4 px-2 flex flex-col items-center justify-center h-[150px] w-[180px]' style={{
                 backgroundColor: color
             }}>
                 {children}
@@ -49,5 +57,6 @@ export function Subsidiary({ description, href, color, children }: { description
 }
 
 function Com() {
-    return <small style={{ fontSize: 10, position: 'absolute', bottom: -4, right: -22.5 }}>.com</small>
+    return <small className='text-xs'>.com</small>
+    // return <small style={{ fontSize: 10, position: 'absolute', bottom: -4, right: -22.5 }}>.com</small>
 }
