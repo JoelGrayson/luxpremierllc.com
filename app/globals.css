@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Avenir;
+    src: url('/fonts/Avenir Book.ttf');
+}
+@font-face {
+    font-family: AvenirMedium;
+    src: url('/fonts/Avenir Medium.ttf');
+}
+@font-face {
+    font-family: Myriad;
+    src: url('/fonts/Myriad Pro Bold.ttf');
+}
+
+@layer base {
+    html, body {
+        padding: 0;
+        margin: 0;
+        font-family: Avenir, AvenirMedium, Myriad, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    }
+
+    *::selection {
+        background-color: #f9c44d;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: AvenirMedium;
+        line-height: 1.8;
+    }
+    h1 { font-size: 3.0rem; font-family: Myriad; }
+    h2 { font-size: 2.1rem; }
+    h3 { font-size: 1.6rem; }
+    h4 { font-size: 1.3rem; }
+    h5 { font-size: 1.2rem; }
+    h6 { font-size: 1.1rem; }
+
+    small {
+        font-size: 65%;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    main p, main div, main button, main li {
+        padding: 10px 0;
+    }
+}
+
+@layer components {
+    .j_container {
+        width: 100%;
+        margin: 0 auto;
+        line-height: 1.75rem;
+        padding: 0 2.5rem;
+    }
+
+    .j_max-w {
+        max-width: 800px;
+    }
+}

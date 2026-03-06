@@ -4,10 +4,38 @@ import { Tooltip, Whisper } from 'rsuite';
 import Link from 'next/link';
 import Head from 'next/head';
 
+const SITE_URL = 'https://luxpremierllc.com';
+const DESCRIPTION = 'Lux Premier is a New York-based LLC established in 2019, behind projects like Edit Time, Lirong Art, Buseroo, Shirtocracy, ChineseIsFun, and ShanghaiDictionary.';
+
 export default function Home() {
     return <Page padding>
         <Head>
             <title>Lux Premier LLC</title>
+            <meta name='description' content={DESCRIPTION} />
+            <link rel='canonical' href={SITE_URL} />
+
+            {/* Open Graph */}
+            <meta property='og:type' content='website' />
+            <meta property='og:url' content={SITE_URL} />
+            <meta property='og:title' content='Lux Premier LLC' />
+            <meta property='og:description' content={DESCRIPTION} />
+            <meta property='og:image' content={`${SITE_URL}/og-image.png`} />
+
+            {/* Twitter Card */}
+            <meta name='twitter:card' content='summary_large_image' />
+            <meta name='twitter:title' content='Lux Premier LLC' />
+            <meta name='twitter:description' content={DESCRIPTION} />
+            <meta name='twitter:image' content={`${SITE_URL}/og-image.png`} />
+
+            {/* Structured Data */}
+            <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'Lux Premier LLC',
+                url: SITE_URL,
+                foundingDate: '2019',
+                description: DESCRIPTION,
+            }) }} />
         </Head>
         <h1 className='text-center mt-10'>Lux Premier LLC</h1>
         <p className='text-xl leading-relaxed mb-5'>Lux Premier is a limited liability company in New York State established in 2019. Here are its various projects:</p>
@@ -46,11 +74,12 @@ export default function Home() {
 
 export function Subsidiary({ description, href, color, children }: { description: string; href: string; color: string; children: any }) {
     return <Whisper followCursor speaker={<Tooltip>{description}</Tooltip>}>
-        <Link href={href} target='_blank'>
+        <Link href={href} target='_blank' aria-label={description}>
             <div className='shadow-md rounded-lg py-4 px-2 flex flex-col items-center justify-center h-[150px] w-[180px]' style={{
                 backgroundColor: color
             }}>
                 {children}
+                <span className='sr-only'>{description}</span>
             </div>
         </Link>
     </Whisper>;
