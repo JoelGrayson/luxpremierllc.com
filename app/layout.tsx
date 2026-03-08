@@ -11,29 +11,16 @@ export const metadata: Metadata = {
     title: 'Lux Premier LLC',
     description: DESCRIPTION,
     alternates: { canonical: '/' },
-    icons: {
-        apple: '/apple-touch-icon.png',
-        icon: [
-            { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-            { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-        ],
-    },
-    manifest: '/site.webmanifest',
-    other: {
-        'msapplication-TileColor': '#2b5797',
-    },
     openGraph: {
         type: 'website',
         url: SITE_URL,
         title: 'Lux Premier LLC',
-        description: DESCRIPTION,
-        images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+        description: DESCRIPTION        
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Lux Premier LLC',
-        description: DESCRIPTION,
-        images: ['/og-image.png'],
+        description: DESCRIPTION
     },
 };
 
@@ -46,8 +33,10 @@ export default function RootLayout({
         <html lang='en'>
             <head>
                 <meta charSet='UTF-8' />
-                <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
-                <meta name='theme-color' content='#ffffff' />
+                <script async src="https://plausible.io/js/pa-XuW0ShEfDdae4QV8Kmnkj.js" />
+                <script
+                    dangerouslySetInnerHTML={{ __html: `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()` }}
+                />
             </head>
             <body>
                 <SiteHeader />
